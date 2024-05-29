@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdbxcbsgq8pth"]
+
+[ext_resource type="Texture2D" uid="uid://ctg4e82nrvdv2" path="res://scripts/sa.png" id="1_n3qfx"]
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_n6a8e"]
+
+[sub_resource type="SystemFont" id="SystemFont_fflmm"]
+font_names = PackedStringArray("Gothic War")
+font_weight = 425
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n6a8e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -25.0
+offset_right = 232.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.512939, 0.69822)
+pivot_offset = Vector2(158.449, 58.2198)
+texture = ExtResource("1_n3qfx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_fflmm")
+theme_override_font_sizes/font_size = 51
+text = "GODOKU JDUMPSKADER"
+
+[node name="Start_Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "START"
